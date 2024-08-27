@@ -1,0 +1,10 @@
+^D:\2222\TASK\SERVER\CMAKELISTS.TXT
+setlocal
+"D:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/2222/Task -BD:/2222/Task/build --check-stamp-file D:/2222/Task/build/Server/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
